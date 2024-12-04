@@ -5,8 +5,9 @@
 # put '/update' с функцией update_user.
 # delete '/delete' с функцией delete_user.
 
+from fastapi import FastAPI, APIRouter
 
-router=APIRouter(prefix="user",tags=["user"])
+router=APIRouter(prefix="/user",tags=["user"])
 
 @router.get("/")
 async def all_users():
@@ -23,6 +24,6 @@ async def create_user():
 async def update_user():
     pass
 
-@router.dalete("/delete")
+@router.delete("/delete")
 async def delete_user():
     pass
